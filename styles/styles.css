@@ -72,7 +72,7 @@ body {
   background-image: url("../images/bg-pattern-top.svg"),
     url("../images/bg-pattern-bottom.svg");
   background-repeat: no-repeat;
-  background-position: right 50vw bottom 40vw, left 50vw top 50vw;
+  background-position: right 50vw bottom 40vh, left 50vw top 50vh;
   display: grid;
   place-content: center;
   min-height: 100vh;

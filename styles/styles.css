@@ -1,0 +1,131 @@
+:root {
+  /* Primary colors */
+  --clr-primary-dark-cyan: hsl(185, 75%, 39%);
+  --clr-primary-desaturated-blue: hsl(229, 23%, 23%);
+  --clr-primary-grayish-blue: hsl(227, 10%, 46%);
+  /* Neutral colors */
+  --clr-neutral-dark-gray: hsl(0, 0%, 59%);
+
+  --fm-kumbh-sans: "Kumbh Sans", sans-serif;
+}
+
+/* css reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* my styling starts here */
+
+body {
+  font-family: var(--fm-kumbh-sans);
+  background-color: var(--clr-primary-dark-cyan);
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 50vw bottom 40vw, left 50vw top 50vw;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+main {
+  font-family: var(--fm-kumbh-sans);
+  background-color: white;
+  text-align: center;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.victor {
+  border-radius: 50%;
+  display: inline-block;
+  transform: translateY(-30px);
+  border: 0.45rem solid white;
+}
+h2 {
+  margin-top: -1.5rem;
+  color: var(--clr-primary-desaturated-blue);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+span {
+  font-weight: 400;
+  color: var(--clr-primary-grayish-blue);
+  /* font-family: var(--fm-kumbh-sans); */
+}
+h2 + p {
+  color: var(--clr-primary-grayish-blue);
+  padding-bottom: 1rem;
+}
+hr {
+  color: var(--clr-neutral-dark-gray);
+  opacity: 0.4;
+}
+.profile {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 2rem;
+}
+
+h3 {
+  color: var(--clr-primary-desaturated-blue);
+  font-weight: bold;
+  font-size: 1.5rem;
+  max-width: 5ch;
+  line-height: 0.9;
+}
+h3 span {
+  font-size: 1rem;
+  /* font-family: var(--fm-kumbh-sans); */
+}
